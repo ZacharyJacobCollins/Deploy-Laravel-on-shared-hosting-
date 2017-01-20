@@ -1,7 +1,9 @@
-# new user
+# Update
+  sudo apt-get update
 
-adduser username
-usermod -aG sudo username
+# new user
+  adduser username
+  usermod -aG sudo username
 
 
 #PHP and extensions
