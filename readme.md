@@ -1,5 +1,6 @@
 # Update
-  sudo apt-get update && apt-get install vim && apt-get install git
+  sudo apt-get update && apt-get install vim && apt-get install git && apt-get install php7.0-sqlite3
+
 
 # new user
   adduser username
