@@ -28,28 +28,28 @@
 #Working nginx conf
 ** NOTE COPY TO BOTH SITES-ENABLED AND SITES-AVAILABLE
   
-  `server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
+    server {
+      listen 80 default_server;
+      listen [::]:80 default_server;
 
-        root /var/www/html/laravel/public;
-        index index.php index.html index.htm index.nginx-debian.html
+      root /var/www/html/laravel/public;
+      index index.php index.html index.htm index.nginx-debian.html
 
-          server_name SERVER_IP_ADDRESS_GOES_HERE;
+      server_name SERVER_IP_ADDRESS_GOES_HERE;
 
-          location / {
-                  try_files $uri $uri/ /index.php?$query_string =404;
-          }    
+      location / {
+        try_files $uri $uri/ /index.php?$query_string =404;
+      }    
 
-        location ~ \.php$ {
-      include snippets/fastcgi-php.conf;
-            fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-          }
-
-    location ~ /\.ht {
-            deny all;
+      location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
       }
-  }`
+
+      location ~ /\.ht {
+        deny all;
+      }
+    }
 
 
 
