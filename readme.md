@@ -6,6 +6,9 @@
   adduser username
   usermod -aG sudo username
 
+# installing node correctly need 6.9>
+http://yoember.com/nodejs/the-best-way-to-install-node-js/
+
 
 #PHP and extensions
   sudo apt-get install php
